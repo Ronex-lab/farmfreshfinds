@@ -15,6 +15,7 @@
             <a href="#">Shop Eggs</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
+            <button class="cart-button">Cart (0)</button>
         </nav>
     </header>
 
@@ -33,13 +34,23 @@
                 <div class="placeholder"></div> <!-- Placeholder for egg pic -->
                 <h3>Dozen Free-Range</h3>
                 <p>$4.99</p>
-                <button>Add to Cart</button>
+                <div class="quantity-container">
+                    <button class="quantity-decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="quantity-increase">+</button>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
             <div class="egg-item">
                 <div class="placeholder"></div>
                 <h3>Organic Tray</h3>
                 <p>$6.99</p>
-                <button>Add to Cart</button>
+                <div class="quantity-container">
+                    <button class="quantity-decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="quantity-increase">+</button>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
     </section>
@@ -58,5 +69,18 @@
     <footer>
         <p>Contact Us | © 2025 Farm Fresh Finds</p>
     </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button id="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
