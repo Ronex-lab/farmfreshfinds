@@ -104,4 +104,74 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCartCount(); // Initialize cart count
     updateCartModal(); // Initialize cart modal
+
+    // Contact form submission handler
+    const contactForm = document.getElementById('contact-form');
+    const submitButton = document.getElementById('submit-message');
+
+    submitButton.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default form submission
+
+        // Get form values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Validate form fields
+        if (!name) {
+            alert('Please enter your name.');
+            return;
+        }
+        if (!email) {
+            alert('Please enter your email.');
+            return;
+        }
+        if (!isValidEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+        if (!message) {
+            alert('Please enter your message.');
+            return;
+        }
+
+        // If all validations pass, show success alert
+        alert(`Thank you, ${name}! Your message has been received. We’ll get back to you at ${email} soon.`);
+        
+        // Optionally, clear the form
+        contactForm.reset();
+    });
+
+    // Newsletter signup submission handler
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterSubmit = document.getElementById('newsletter-submit');
+
+    newsletterSubmit.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default form submission
+
+        // Get email value
+        const email = document.getElementById('newsletter-email').value.trim();
+
+        // Validate email
+        if (!email) {
+            alert('Please enter your email address.');
+            return;
+        }
+        if (!isValidEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        // If validation passes, show success alert
+        alert(`Thank you! You’ve subscribed to our newsletter with ${email}. Expect updates soon.`);
+        
+        // Optionally, clear the form
+        newsletterForm.reset();
+    });
+
+    // Function to validate email format
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
 });
