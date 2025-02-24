@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farm Fresh Finds - Home</title>
+    <title>Farm Fresh Finds - Shop Eggs</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,12 +19,34 @@
         </nav>
     </header>
 
-    <!-- Hero Section (Cover Page) -->
-    <section class="hero">
-        <h1>Welcome to Farm Fresh Finds</h1>
-        <p>Discover the freshest eggs straight from our family farm. Click below to shop now!</p>
-        <div class="hero-image-placeholder"></div> <!-- Placeholder for the big egg image -->
-        <button onclick="window.location.href='shop-eggs.html'">Shop Eggs Now</button>
+    <!-- Main Content - Egg Catalog -->
+    <section class="catalog">
+        <h2>Our Eggs</h2>
+        <div class="egg-grid">
+            <div class="egg-item">
+                <div class="placeholder"></div> <!-- Placeholder for egg pic -->
+                <h3>Dozen Free-Range</h3>
+                <p>$4.99</p>
+                <div class="quantity-container">
+                    <button class="quantity-decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="quantity-increase">+</button>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="egg-item">
+                <div class="placeholder"></div>
+                <h3>Organic Tray</h3>
+                <p>$6.99</p>
+                <div class="quantity-container">
+                    <button class="quantity-decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="quantity-increase">+</button>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more egg items here later if needed -->
+        </div>
     </section>
 
     <!-- Payment Options Placeholder -->
