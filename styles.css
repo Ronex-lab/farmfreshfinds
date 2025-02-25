@@ -293,3 +293,24 @@ footer {
 #newsletter-submit:hover {
     background-color: #E68A00; /* Darker orange for hover */
 }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #6B8E23; /* Olive green */
+    color: white;
+}
+
+.footer-nav {
+    margin-bottom: 10px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
