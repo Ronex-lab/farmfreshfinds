@@ -15,18 +15,23 @@
             <a href="shop-eggs.html">Shop Eggs</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+            <a href="blog.html">Blog</a>
+            <input type="text" id="search-bar" placeholder="Search eggs..." class="search-bar">
             <button class="cart-button">Cart (0)</button>
+            <button id="login-button">Login</button>
         </nav>
     </header>
 
     <!-- Main Content - Egg Catalog -->
     <section class="catalog">
         <h2>Our Eggs</h2>
-        <div class="egg-grid">
+        <div class="egg-grid" id="egg-grid">
             <div class="egg-item">
-                <div class="placeholder"></div> <!-- Placeholder for egg pic (we’ll revisit in Step 1) -->
+                <img src="https://images.pexels.com/photos/159140/pexels-photo-159140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Dozen Free-Range Eggs" class="egg-image">
                 <h3>Dozen Free-Range</h3>
                 <p>$4.99</p>
+                <p class="stock-status" data-egg="Dozen Free-Range">Loading...</p>
                 <div class="quantity-container">
                     <button class="quantity-decrease">-</button>
                     <input type="number" class="quantity-input" value="1" min="1">
@@ -35,9 +40,34 @@
                 <button class="add-to-cart">Add to Cart</button>
             </div>
             <div class="egg-item">
-                <div class="placeholder"></div>
+                <img src="https://images.pexels.com/photos/1104720/pexels-photo-1104720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Organic Tray Eggs" class="egg-image">
                 <h3>Organic Tray</h3>
                 <p>$6.99</p>
+                <p class="stock-status" data-egg="Organic Tray">Loading...</p>
+                <div class="quantity-container">
+                    <button class="quantity-decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="quantity-increase">+</button>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="egg-item">
+                <img src="https://images.pexels.com/photos/326900/pexels-photo-326900.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Dozen Organic Brown Eggs" class="egg-image">
+                <h3>Dozen Organic Brown Eggs</h3>
+                <p>$5.49</p>
+                <p class="stock-status" data-egg="Dozen Organic Brown Eggs">Loading...</p>
+                <div class="quantity-container">
+                    <button class="quantity-decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="quantity-increase">+</button>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="egg-item">
+                <img src="https://images.pexels.com/photos/1326594/pexels-photo-1326594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Half-Dozen Free-Range Blue Eggs" class="egg-image">
+                <h3>Half-Dozen Free-Range Blue Eggs</h3>
+                <p>$3.29</p>
+                <p class="stock-status" data-egg="Half-Dozen Free-Range Blue Eggs">Loading...</p>
                 <div class="quantity-container">
                     <button class="quantity-decrease">-</button>
                     <input type="number" class="quantity-input" value="1" min="1">
@@ -64,7 +94,9 @@
             <a href="index.html">Home</a> |
             <a href="shop-eggs.html">Shop Eggs</a> |
             <a href="about.html">About</a> |
-            <a href="contact.html">Contact</a>
+            <a href="contact.html">Contact</a> |
+            <a href="faq.html">FAQ</a> |
+            <a href="blog.html">Blog</a>
         </nav>
         <p>© 2025 Farm Fresh Finds | Contact Us</p>
     </footer>
@@ -77,6 +109,22 @@
             <ul id="cart-items"></ul>
             <p>Total: $<span id="cart-total">0.00</span></p>
             <button id="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <button type="submit" id="login-submit">Login</button>
+            </form>
+            <button id="register-button">Register</button>
         </div>
     </div>
 
